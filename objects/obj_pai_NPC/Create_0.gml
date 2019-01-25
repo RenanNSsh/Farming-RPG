@@ -3,8 +3,8 @@
 
 vel_caminhando = 1;
 vel_normal = 2;
-vel_correndo = 17;
-vel = vel_normal;
+vel_correndo = 3;
+velocidade = vel_normal;
 
 x_frame = 1;
 y_frame = 11;
@@ -16,3 +16,9 @@ spr_base = -1;
 spr_cabelo = -1;
 spr_torso = -1;
 spr_pes = -1;
+spr_sombra = -1;
+
+moveX = 0;
+moveY = 0;
+
+alarm[1] = 1;

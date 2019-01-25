@@ -20,25 +20,20 @@ if(x_frame + (anim_velocidade/60) < anim_tamanho){
 }
 
 //DESENHA A SOMBRA DO PERSONAGEM
-draw_sprite(spr_sombra_personagem,0,x,y)
+if(spr_sombra != -1) draw_sprite(spr_sombra,0,x,y)
 
 //DESENHA A BASE DO PERSONAGEM
-draw_sprite_part(spr_base, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
+if(spr_base != -1) draw_sprite_part(spr_base, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 //DESENHA O CABELO DO PERSONAGEM
-draw_sprite_part(spr_cabelo, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
+if(spr_cabelo != -1) draw_sprite_part(spr_cabelo, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 //DESENHA O TORÇO DO PERSONAGEM
-draw_sprite_part(spr_torso, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
+if(spr_torso != -1) draw_sprite_part(spr_torso, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 //DESENHA A PERNA DO PERSONAGEM
-draw_sprite_part(spr_pernas, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 //DESENHA O PÉ DO PERSONAGEM
-draw_sprite_part(spr_pes, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
-
-//MUDA O FRAME PARA A ANIMAÇÃO
-
-
+if(spr_pes != -1) draw_sprite_part(spr_pes, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 draw_rectangle_color(bbox_left,bbox_top,bbox_right,bbox_bottom,c_yellow,c_yellow,c_yellow,c_yellow,true);

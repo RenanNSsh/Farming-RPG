@@ -1,12 +1,4 @@
-/// Movimentação do personagem
-// se apertar um botão move o jogador
-
-//-----------RESETA MOVIMENTO
-moveX = 0;
-moveY = 0;
-
-//-----------ITENÇÃO DE MOVIMENTO
-
+/// Colisao do NPC
 
 //-----------CHECAGEM DE COLISÃO
 

@@ -47,10 +47,18 @@
             }
         },
         {
+            "Key": "03a8bb5a-52d5-4a13-a585-6e04189d20a7",
+            "Value": {
+                "id": "023eebd5-c9ef-44d5-b688-c5387fa4b68a",
+                "resourcePath": "sprites\\spr_tile_interior_2\\spr_tile_interior_2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0fccc517-3579-44bc-802e-e9c805cbfba5",
             "Value": {
                 "id": "af331d7e-e35e-4c02-aff3-2f05023ea76c",
-                "resourcePath": "rooms\\rm_1\\rm_1.yy",
+                "resourcePath": "rooms\\rm_fazenda\\rm_fazenda.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -84,6 +92,14 @@
                 "id": "3036398a-de1a-4af9-98cd-2d34d882d7bb",
                 "resourcePath": "views\\1b4cce4b-23ea-4a8d-8b32-c3daa536744d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "21c444aa-e9d1-4a47-8dc6-98bb3512cfe1",
+            "Value": {
+                "id": "4a3d6f7a-850c-4161-8c63-13f24d7c2087",
+                "resourcePath": "tilesets\\tile_interior_1\\tile_interior_1.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -151,6 +167,14 @@
             }
         },
         {
+            "Key": "517b62e4-1c65-4e7f-a7e0-0137697fb0fd",
+            "Value": {
+                "id": "4cf50754-07af-443a-a3f9-2559f03982ed",
+                "resourcePath": "objects\\obj_transicao\\obj_transicao.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5d4de819-cac5-4cd8-80ca-9219cd9853ae",
             "Value": {
                 "id": "071f3b3d-7843-4388-9891-92d74620be33",
@@ -207,6 +231,14 @@
             }
         },
         {
+            "Key": "887ee281-43e2-4853-940c-248fda25ba76",
+            "Value": {
+                "id": "8cbec319-36f1-4115-b66e-7705f570f517",
+                "resourcePath": "sprites\\spr_transicao\\spr_transicao.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8b01bdfc-2fa9-4172-a8a8-2ae9f79e9510",
             "Value": {
                 "id": "ba647aef-77cf-460d-87b8-95f375add85e",
@@ -255,11 +287,27 @@
             }
         },
         {
+            "Key": "a4af7c90-9c47-41fd-90f3-e39ff2786aa5",
+            "Value": {
+                "id": "766dd1e6-c4bd-4920-a6b9-4051b7c116ab",
+                "resourcePath": "tilesets\\tile_interior_2\\tile_interior_2.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "a7d1679a-8bba-441c-9129-c35a146ecb55",
             "Value": {
                 "id": "e6ab9927-f5ad-4a52-80b1-112222b299ba",
                 "resourcePath": "sprites\\spr_base_mulher_1\\spr_base_mulher_1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "db616a65-2091-4742-8d58-e1679cd8538a",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -292,6 +340,14 @@
                 "id": "b13ccf65-23e1-4c1c-8858-e339558117a1",
                 "resourcePath": "tilesets\\tile_telhado\\tile_telhado.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "bc704aa0-1518-4ea3-b82e-65190716beac",
+            "Value": {
+                "id": "05cc1f46-1a15-4834-93e0-9b11ac72a798",
+                "resourcePath": "rooms\\rm_casa\\rm_casa.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -340,6 +396,14 @@
                 "id": "dce8a204-6c1b-4cbf-99da-1ea2645b4bd0",
                 "resourcePath": "rooms\\rm_0\\rm_0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "c9b09894-fa78-4959-a46f-4044d703315c",
+            "Value": {
+                "id": "64cc0218-bef9-4376-ab6f-97a1d45c1367",
+                "resourcePath": "sprites\\spr_tile_interior_1\\spr_tile_interior_1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -415,11 +479,27 @@
             }
         },
         {
+            "Key": "e9add21d-a991-4693-b9d1-ba74c5777d6b",
+            "Value": {
+                "id": "442387b4-ebed-400b-9c92-0d76d7247f10",
+                "resourcePath": "rooms\\rm_floresta\\rm_floresta.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "f2e261a6-70af-441c-86a5-a1542e9ab85d",
             "Value": {
                 "id": "bb7e08cc-0ca2-447d-848c-2846afeee92f",
                 "resourcePath": "views\\f2e261a6-70af-441c-86a5-a1542e9ab85d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "6bc2bf20-40d2-44da-95c6-d4b457ea0b6f",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         },
         {

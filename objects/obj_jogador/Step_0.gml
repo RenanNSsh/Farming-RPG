@@ -55,6 +55,9 @@ if(moveY!=0){
 	}
 }
 
+//Objetos
+
+
 //-----------APLICA MOVIMENTO
 x += moveX;
 y += moveY;

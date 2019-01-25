@@ -32,6 +32,7 @@ if(spr_cabelo != -1) draw_sprite_part(spr_cabelo, 0, floor(x_frame) * frame_tama
 if(spr_torso != -1) draw_sprite_part(spr_torso, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 //DESENHA A PERNA DO PERSONAGEM
+if(spr_perna != -1) draw_sprite_part(spr_perna, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
 //DESENHA O PÉ DO PERSONAGEM
 if(spr_pes != -1) draw_sprite_part(spr_pes, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);

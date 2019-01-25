@@ -18,3 +18,4 @@ spr_torso = spr_torso_homem_1;
 spr_pernas = spr_pernas_homem_1;
 spr_pes = spr_pes_homem_1;
 spr_sombra = spr_sombra_personagem;
+spr_perna = spr_pernas_homem_1;

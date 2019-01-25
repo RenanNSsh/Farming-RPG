@@ -55,8 +55,9 @@ if(moveY!=0){
 	}
 }
 
-//Objetos
-
+//COLISÃO COM OBJETOS
+var instanciaTransicao = instance_place(x,y,obj_transicao);
+if(instanciaTransicao != noone) room_goto(instanciaTransicao.roomDestino);
 
 //-----------APLICA MOVIMENTO
 x += moveX;

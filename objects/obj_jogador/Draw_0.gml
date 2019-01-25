@@ -36,4 +36,3 @@ if(spr_torso != -1) draw_sprite_part(spr_torso, 0, floor(x_frame) * frame_tamanh
 //DESENHA O PÉ DO PERSONAGEM
 if(spr_pes != -1) draw_sprite_part(spr_pes, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 
-draw_rectangle_color(bbox_left,bbox_top,bbox_right,bbox_bottom,c_yellow,c_yellow,c_yellow,c_yellow,true);

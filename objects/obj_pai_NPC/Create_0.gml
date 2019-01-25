@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-vel_caminhando = 1;
-vel_normal = 2;
-vel_correndo = 3;
+vel_caminhando = 0.5;
+vel_normal = 1;
+vel_correndo = 2;
 velocidade = vel_normal;
 
 x_frame = 1;

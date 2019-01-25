@@ -19,6 +19,9 @@ if(x_frame + (anim_velocidade/60) < anim_tamanho){
 	x_frame = 1;
 }
 
+//DESENHA A SOMBRA DO PERSONAGEM
+draw_sprite(spr_sombra_personagem,0,x,y)
+
 //DESENHA A BASE DO PERSONAGEM
 draw_sprite_part(spr_base, 0, floor(x_frame) * frame_tamanho, y_frame * frame_tamanho, frame_tamanho, frame_tamanho, xx,yy);
 

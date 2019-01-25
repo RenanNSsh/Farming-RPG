@@ -151,10 +151,26 @@
             }
         },
         {
+            "Key": "5d4de819-cac5-4cd8-80ca-9219cd9853ae",
+            "Value": {
+                "id": "071f3b3d-7843-4388-9891-92d74620be33",
+                "resourcePath": "views\\5d4de819-cac5-4cd8-80ca-9219cd9853ae.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5e6ba6cf-d25a-4db4-8af1-6027a9119acb",
             "Value": {
                 "id": "e6b80cdd-face-4cc7-a9b2-27d156f18783",
                 "resourcePath": "views\\5e6ba6cf-d25a-4db4-8af1-6027a9119acb.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "62541808-d2a8-48e6-8b75-e96f39d26d10",
+            "Value": {
+                "id": "787c4890-468d-4113-9670-fe959f12b167",
+                "resourcePath": "views\\62541808-d2a8-48e6-8b75-e96f39d26d10.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -183,11 +199,27 @@
             }
         },
         {
+            "Key": "7fd1d1df-c2f6-4db4-86ea-d98fd2a78b03",
+            "Value": {
+                "id": "094e43a6-a546-4cf6-bd37-5a5a53a78610",
+                "resourcePath": "objects\\obj_pai_NPC\\obj_pai_NPC.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8b01bdfc-2fa9-4172-a8a8-2ae9f79e9510",
             "Value": {
                 "id": "ba647aef-77cf-460d-87b8-95f375add85e",
                 "resourcePath": "objects\\obj_jogador\\obj_jogador.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "96f65f65-11ac-44a2-96e7-1a803cd3478b",
+            "Value": {
+                "id": "9af02d8e-4ab8-4d40-96bc-1e0d54697735",
+                "resourcePath": "views\\96f65f65-11ac-44a2-96e7-1a803cd3478b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -207,6 +239,14 @@
             }
         },
         {
+            "Key": "9b2a7155-f0bc-404c-8df1-ff9507d969be",
+            "Value": {
+                "id": "6250dfa9-8a4d-4c18-a723-be56e6610011",
+                "resourcePath": "views\\9b2a7155-f0bc-404c-8df1-ff9507d969be.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9f5176f8-04f7-44f3-b4e0-340f0f410728",
             "Value": {
                 "id": "0032c761-ea6b-4157-bc0a-a332a9bd774f",
@@ -220,6 +260,14 @@
                 "id": "e6ab9927-f5ad-4a52-80b1-112222b299ba",
                 "resourcePath": "sprites\\spr_base_mulher_1\\spr_base_mulher_1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aca3c240-5c06-44a0-9226-d834d32e0f61",
+            "Value": {
+                "id": "acef46a1-2142-4f9d-9f2f-b0a18919272d",
+                "resourcePath": "views\\aca3c240-5c06-44a0-9226-d834d32e0f61.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -260,6 +308,14 @@
                 "id": "50369ca0-308f-49db-8110-b1571e294730",
                 "resourcePath": "views\\bf10efbd-3f37-4859-a379-90dde59b16fd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c229b1b8-cf2c-4279-bba1-ce0c3725c500",
+            "Value": {
+                "id": "1f1b8a4a-7ee5-444f-8478-377d99ee01be",
+                "resourcePath": "sprites\\spr_sombra_personagem\\spr_sombra_personagem.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

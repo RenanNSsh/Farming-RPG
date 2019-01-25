@@ -8,8 +8,7 @@
         "3ec43c60-61a0-49c4-80e0-a926ac9da9d7",
         "9714f6ac-37d3-4048-9396-6305ba9fc956",
         "37f04ecc-43bb-4a6e-bb8c-06b878d4f104",
-        "cefc16b2-9c91-4857-a406-14638c5426a3",
-        "d2764f30-3ecb-4a73-b17e-4a606bc43d1a"
+        "cefc16b2-9c91-4857-a406-14638c5426a3"
     ],
     "filterType": "GMSprite",
     "folderName": "Personagens",

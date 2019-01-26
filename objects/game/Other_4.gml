@@ -18,3 +18,4 @@ with(obj_jogador){
 		case -1: x_frame = 0; break;
 	}
 }
+

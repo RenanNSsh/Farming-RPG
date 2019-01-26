@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "81b42aea-a534-441d-8e9c-32964647b3bb",
+            "Value": {
+                "id": "a397f0a7-7cc2-4fc4-9493-16c37996c594",
+                "resourcePath": "scripts\\respawn_plantagem\\respawn_plantagem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "887ee281-43e2-4853-940c-248fda25ba76",
             "Value": {
                 "id": "8cbec319-36f1-4115-b66e-7705f570f517",
@@ -601,7 +609,8 @@
     ],
     "script_order": [
         "c3aff53a-0d37-45b1-af32-bc2a61d8292d",
-        "ae803fba-6816-4a8c-92da-7acd74ffe780"
+        "ae803fba-6816-4a8c-92da-7acd74ffe780",
+        "81b42aea-a534-441d-8e9c-32964647b3bb"
     ],
     "tutorial": ""
 }

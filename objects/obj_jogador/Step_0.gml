@@ -24,6 +24,24 @@ moveY = 0;
 moveX = (botao_direita - botao_esquerda) * vel;
 if(moveX==0) {moveY = (botao_baixo - botao_cima) * vel;}
 
+//PEGA A DIRECAO DO PERSONAGEM
+if(moveX!= 0){
+	switch(sign(moveX)){
+		case 1: direcaoPersonagem = direcao.direita; break;
+		case -1: direcaoPersonagem = direcao.esquerda; break;		
+	}
+}
+
+if(moveY!=0){
+	switch(sign(moveY)){
+		case 1: direcaoPersonagem = direcao.baixo; break;
+		case -1: direcaoPersonagem = direcao.cima; break;
+	}
+}
+
+if (moveX==0 && moveY == 0){
+	direcaoPersonagem = -1;
+}
 
 //-----------CHECAGEM DE COLISÃO
 
@@ -57,7 +75,17 @@ if(moveY!=0){
 
 //COLISÃO COM OBJETOS
 var instanciaTransicao = instance_place(x,y,obj_transicao);
-if(instanciaTransicao != noone) room_goto(instanciaTransicao.roomDestino);
+if(instanciaTransicao != noone && direcaoPersonagem == instanciaTransicao.direcaoJogadorAntes) {
+	with(game){
+		if(!fazerTransicao ){
+			spawnRoom = instanciaTransicao.roomDestino;
+			spawnX = instanciaTransicao.xDestino;
+			spawnY = instanciaTransicao.yDestino;
+			spawnJogadorDirecao = instanciaTransicao.direcaoJogadorDepois;
+			fazerTransicao = true;
+		}
+	}
+}
 
 //-----------APLICA MOVIMENTO
 x += moveX;

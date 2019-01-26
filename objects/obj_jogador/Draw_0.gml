@@ -4,11 +4,14 @@ var anim_tamanho = 9;
 var frame_tamanho = 64;
 var anim_velocidade = 12;
 
-if(moveX<0) { y_frame = 9; }
-else if(moveX>0) { y_frame = 11; }
-else if(moveY>0) { y_frame = 10; }
-else if(moveY<0) { y_frame = 8; }
-else { x_frame = 0; }
+
+switch(direcaoPersonagem){
+	case direcao.esquerda:  y_frame = 9; break;
+	case direcao.direita: y_frame = 11; break;
+	case direcao.baixo: y_frame = 10; break;
+	case direcao.cima: y_frame = 8; break;
+	case -1: x_frame = 0; break;
+}
 
 var xx = x-x_offset;
 var yy = y-y_offset;

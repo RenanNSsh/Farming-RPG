@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "a49b922c-1dad-46b6-8580-69109a1e02d8",
+            "Value": {
+                "id": "52c962f0-710a-4fd5-872f-a226cd96cfd8",
+                "resourcePath": "objects\\cicloDia\\cicloDia.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a4af7c90-9c47-41fd-90f3-e39ff2786aa5",
             "Value": {
                 "id": "766dd1e6-c4bd-4920-a6b9-4051b7c116ab",

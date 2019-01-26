@@ -18,9 +18,9 @@ if(room == rm_fazenda || room = rm_floresta){
 		}
 		
 		with(obj_plantagem){
-			if(estagioCrescimento < estagioCrescimentoMaximo){		
-				estagioCrescimento = (idadeDias div duracaoEstagioDias);			
-			}else{
+			estagioCrescimento = (idadeDias div duracaoEstagioDias);			
+			
+			if(estagioCrescimento >= estagioCrescimentoMaximo){
 				estagioCrescimento = estagioCrescimentoMaximo;
 				crescidoCompletamente = true;
 				alarm[1] = 1;

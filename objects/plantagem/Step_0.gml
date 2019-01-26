@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(room != rm_fazenda && room != rm_floresta){
+	plantando = false;
+	exit;
+}
+
 #region Plantanndo
 	if(keyboard_check_pressed(ord("P"))) {plantando = !plantando;}
 
@@ -32,6 +37,9 @@ if(instance_exists(obj_plantagem) && keyboard_check_pressed(ord("G"))){
 		}else{
 			estagioCrescimento = estagioCrescimentoMaximo;
 			crescidoCompletamente = true;
+			if(tipoPlantagem == plantas.milho){
+				colidivel = true;
+			}
 			alarm[1] = 1;
 		}
 	}

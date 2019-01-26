@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+colidivel = false;
 
 larguraFrame = 32;
 alturaFrame = 64;

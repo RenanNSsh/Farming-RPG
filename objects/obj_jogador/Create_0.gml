@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited();
 
 vel_caminhando = 1;
 vel_normal = 2;

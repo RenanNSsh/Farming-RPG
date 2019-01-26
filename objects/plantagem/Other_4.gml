@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(room == rm_fazenda){
+if(room == rm_fazenda || room = rm_floresta){
 	
 	ds_plantagem_instancias = ds_grid_create(room_width div tamanhoFrame, room_height div tamanhoFrame);
 	ds_grid_clear(ds_plantagem_instancias,0);

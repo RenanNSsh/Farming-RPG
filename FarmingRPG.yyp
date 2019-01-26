@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "131031fc-3eb9-4f86-8651-ec279a278c37",
+            "Value": {
+                "id": "ad8e2a3b-1966-49e1-9ba4-b215b7ab5df9",
+                "resourcePath": "objects\\par_ObjetoProfundidade\\par_ObjetoProfundidade.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "14dffa96-1f48-423a-9ff7-28ae92fab184",
             "Value": {
                 "id": "52f96cd5-a01e-4619-a2e7-c4fd41d4190e",
@@ -140,6 +148,14 @@
                 "id": "62a49194-a3bb-46cf-ba36-bcde7477a8e3",
                 "resourcePath": "tilesets\\tile_terreno\\tile_terreno.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "3e15e1f8-e85a-4809-bf8e-293ac917d6e6",
+            "Value": {
+                "id": "78d18ae7-fa5f-4fea-9c86-596474ffc97e",
+                "resourcePath": "objects\\organizadorProfundidade\\organizadorProfundidade.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -247,10 +263,18 @@
             }
         },
         {
+            "Key": "79391380-b46b-4335-b575-04dbc9e147be",
+            "Value": {
+                "id": "52a8f370-aec0-41f7-bb0e-d856e0ab4e6b",
+                "resourcePath": "views\\79391380-b46b-4335-b575-04dbc9e147be.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7fd1d1df-c2f6-4db4-86ea-d98fd2a78b03",
             "Value": {
                 "id": "094e43a6-a546-4cf6-bd37-5a5a53a78610",
-                "resourcePath": "objects\\obj_pai_NPC\\obj_pai_NPC.yy",
+                "resourcePath": "objects\\par_NPC\\par_NPC.yy",
                 "resourceType": "GMObject"
             }
         },

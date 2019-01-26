@@ -8,9 +8,9 @@ var gradeX = (mouseX div frame);
 var gradeY = (mouseY div frame);
 
 var corPossivelPlantar = c_red;
-var celula = ds_plantagem_data[# gradeX,gradeY];
+var celula = ds_plantagem_instancias[# gradeX,gradeY];
 
-if(celula != 0){
+if(celula == 0){
 	var camadaId = layer_get_id("L1_SoloFertil");
 	var mapaId = layer_tilemap_get_id(camadaId);
 	var data = tilemap_get_at_pixel(mapaId,mouseX,mouseY);

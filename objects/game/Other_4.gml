@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+larguraRoom = room_width;
+alturaRoom = room_height;
+
 
 if(spawnRoom == -1) exit;
 obj_jogador.x = spawnX;

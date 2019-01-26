@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 ds_plantagem_tipo = 0;
+ds_plantagem_instancias = 0;
 
 enum plantas {
 	tomate,
@@ -26,3 +26,5 @@ plantaSelecionada = 0;
 
 mouseX = 0;
 mouseY = 0;
+
+tamanhoFrame = 32;

@@ -543,6 +543,14 @@
             }
         },
         {
+            "Key": "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8",
+            "Value": {
+                "id": "418f41f1-417a-4b22-a989-2bb10277bfba",
+                "resourcePath": "scripts\\mescla_numeros\\mescla_numeros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e0f9e7c6-f97a-4b09-a018-6d34e47129a9",
             "Value": {
                 "id": "7587f029-51af-42ea-b7f1-ea87331d78b0",
@@ -642,7 +650,8 @@
     "script_order": [
         "c3aff53a-0d37-45b1-af32-bc2a61d8292d",
         "ae803fba-6816-4a8c-92da-7acd74ffe780",
-        "81b42aea-a534-441d-8e9c-32964647b3bb"
+        "81b42aea-a534-441d-8e9c-32964647b3bb",
+        "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8"
     ],
     "tutorial": ""
 }

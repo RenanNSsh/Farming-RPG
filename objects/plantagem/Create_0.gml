@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-ds_plantagem_tipo = 0;
-ds_plantagem_instancias = 0;
+ds_plantagem_tipo = -1;
+ds_plantagem_instancias = -1;
 
 enum plantas {
 	tomate,

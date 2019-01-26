@@ -6,12 +6,12 @@ alturaFrame = 64;
 
 tipoPlantagem = 0;
 idadeDias = 0;
-estagioCrescimento = 3;
-duracaoEstagioDias = 0;
+estagioCrescimento = 0;
+duracaoEstagioDias = -1;
 estagioCrescimentoMaximo = (sprite_get_width(spr_plantagem)/larguraFrame)-1;
 
 crescidoCompletamente = false;
-particula = false;
+particula = -1;
 
 xx = x-(larguraFrame/2)+2;
 yy = y-alturaFrame+6;

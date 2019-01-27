@@ -20,6 +20,7 @@ if(celula == 0){
 xx = gradeX * frame;
 yy = gradeY * frame;
 
+draw_text(xx,yy-15,string(inventario.indicePlantaSelecionada));
 draw_rectangle_color(xx,yy, xx+frame, yy+frame, corPossivelPlantar, corPossivelPlantar, corPossivelPlantar, corPossivelPlantar, true);
 
 if(plantaSelecionada != -1){

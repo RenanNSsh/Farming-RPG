@@ -623,6 +623,14 @@
             }
         },
         {
+            "Key": "e329a83d-bc65-43d2-9c7d-5887b9bba2ac",
+            "Value": {
+                "id": "3926098d-1945-44cb-93d3-60c3fff2cfbf",
+                "resourcePath": "scripts\\remover_itens_duplicados\\remover_itens_duplicados.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e3fd968e-2b9f-46ef-a94d-584fbb25a0e2",
             "Value": {
                 "id": "bce3ae14-6189-4683-b212-6d0c16a1f879",
@@ -731,7 +739,8 @@
         "c3aff53a-0d37-45b1-af32-bc2a61d8292d",
         "ae803fba-6816-4a8c-92da-7acd74ffe780",
         "81b42aea-a534-441d-8e9c-32964647b3bb",
-        "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8"
+        "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8",
+        "e329a83d-bc65-43d2-9c7d-5887b9bba2ac"
     ],
     "tutorial": ""
 }

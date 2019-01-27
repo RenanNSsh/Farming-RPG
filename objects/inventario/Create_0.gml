@@ -93,6 +93,7 @@ enum item{
 indicePlantaSelecionada = 0;
 var dsInventario = ds_inventario;
 
+var plantasExistentes = []
 for(var yy = 0; yy < inventario_slots;yy++){
 	var itemAleatorio = irandom_range(1, item.tamanho - 1);
 	var valorAleatorio = irandom_range(1,10);
@@ -100,11 +101,18 @@ for(var yy = 0; yy < inventario_slots;yy++){
 	dsInventario[# 1, yy] = valorAleatorio;
 	
 	if(itemAleatorio <= plantas.tamanho){
-		if(ds_list_find_index(ds_plantasInventario,itemAleatorio-1)){
-			show_debug_message("item repetido: "+string(itemAleatorio));
-			continue;
+		var planta = itemAleatorio-1;
+		var repetido = false;
+		show_debug_message("item: "+string(planta))
+		for(var indice = 0; indice< array_length_1d(plantasExistentes);indice++){
+			if(planta == plantasExistentes[indice]) {show_debug_message("repetido: "+string(planta)) repetido = true; break; }
 		}
-		ds_list_add(ds_plantasInventario,itemAleatorio-1);		
+		if(!repetido){
+			show_debug_message("diferente: "+string(planta))
+			plantasExistentes[array_length_1d(plantasExistentes)] = planta;			
+			ds_list_add(ds_plantasInventario,planta);		
+		}
+		
 	}
 	
 }

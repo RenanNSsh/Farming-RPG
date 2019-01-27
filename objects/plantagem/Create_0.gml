@@ -27,7 +27,7 @@ cria_plantagem_tipo(5,50,"milho");
 
 plantando = false;
 
-plantaSelecionada = -1;
+plantaSelecionada =  -1;
 
 mouseX = 0;
 mouseY = 0;

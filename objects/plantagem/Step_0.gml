@@ -17,15 +17,15 @@ if(room != rm_fazenda && room != rm_floresta){
 		if(mouse_wheel_down())  inventario.indicePlantaSelecionada--;
 				
 	
-		var ultimaPlanta = array_length_1d(inventario.plantasInventario)-1;
+		var ultimaPlanta = ds_list_size(inventario.ds_plantasInventario)-1;
 		if(inventario.indicePlantaSelecionada < 0){
-			plantaSelecionada = inventario.plantasInventario[ultimaPlanta];
+			plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,ultimaPlanta);
 			inventario.indicePlantaSelecionada = ultimaPlanta;
 		}else if(inventario.indicePlantaSelecionada > ultimaPlanta){
-			plantaSelecionada = inventario.plantasInventario[0];
+			plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,0);
 			inventario.indicePlantaSelecionada = 0;
 		}else{
-			plantaSelecionada = inventario.plantasInventario[inventario.indicePlantaSelecionada];
+			plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,inventario.indicePlantaSelecionada);
 		}
 		
 		

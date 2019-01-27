@@ -64,6 +64,7 @@ playerInfo[# 1, 3] = "Jogador";
 //1 = NUMERO
 
 ds_inventario = ds_grid_create(2, inventario_slots);
+ds_plantasInventario = ds_list_create();
 
 enum item{
 	nenhum	       = 0,
@@ -89,24 +90,25 @@ enum item{
 	tamanho        = 20
 }
 
-for(var yy = 0; yy < inventario_slots;yy++){
-	ds_inventario [# 0, yy] = irandom_range(1, item.tamanho - 1);
-	ds_inventario [# 1, yy] = irandom_range(1,10);
-	
-}
-plantasInventario = [];
-indicePlantaSelecionada = -1;
+indicePlantaSelecionada = 0;
 var dsInventario = ds_inventario;
 
-with(plantagem){	
-	for(var yy = 0; yy<item.tamanho;yy++){		
-		var item_no_inventario = dsInventario[# 0, yy];
-		show_debug_message("item: " + string(item_no_inventario));
-		if(item_no_inventario >0 && item_no_inventario<=plantas.tamanho){
-			inventario.plantasInventario[array_length_1d(inventario.plantasInventario)] =  item_no_inventario-1;
-			show_debug_message("planta: " + string(item_no_inventario));
+for(var yy = 0; yy < inventario_slots;yy++){
+	var itemAleatorio = irandom_range(1, item.tamanho - 1);
+	var valorAleatorio = irandom_range(1,10);
+	dsInventario[# 0, yy] = itemAleatorio;
+	dsInventario[# 1, yy] = valorAleatorio;
+	
+	if(itemAleatorio <= plantas.tamanho){
+		if(!ds_list_find_index(ds_plantasInventario,itemAleatorio-1)){
+			ds_list_add(ds_plantasInventario,itemAleatorio-1);		
 		}
 	}
-	inventario.indicePlantaSelecionada = 0;
-	plantaSelecionada = inventario.plantasInventario[0];
+	
+}
+
+
+
+with(plantagem){	
+	plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,inventario.indicePlantaSelecionada);
 }

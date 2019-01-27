@@ -100,9 +100,11 @@ for(var yy = 0; yy < inventario_slots;yy++){
 	dsInventario[# 1, yy] = valorAleatorio;
 	
 	if(itemAleatorio <= plantas.tamanho){
-		if(!ds_list_find_index(ds_plantasInventario,itemAleatorio-1)){
-			ds_list_add(ds_plantasInventario,itemAleatorio-1);		
+		if(ds_list_find_index(ds_plantasInventario,itemAleatorio-1)){
+			show_debug_message("item repetido: "+string(itemAleatorio));
+			continue;
 		}
+		ds_list_add(ds_plantasInventario,itemAleatorio-1);		
 	}
 	
 }

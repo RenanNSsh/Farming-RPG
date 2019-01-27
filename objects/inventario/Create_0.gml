@@ -6,6 +6,12 @@ escala = 2;
 tamanhoFrame = 32;
 mostrarInventario = true;
 
+slot_selecionado = 0;
+slot_pegado = -1;
+
+mouse_slotX = 0;
+mouse_slotY = 0;
+
 larguraTela = display_get_gui_width();
 alturaTela = display_get_gui_height();
 
@@ -15,14 +21,17 @@ inventarioAltura = 192;
 xStart = (larguraTela/2) - (inventarioLargura * escala / 2);
 yStart = (alturaTela/2) - (inventarioAltura * escala / 2);
 
-inventario_slots = 17;
+inventario_slots = 20;
 inventario_slots_altura = 3;
 inventario_slots_largura = 8;
+
+x_distancia_slot = 2;
+y_distancia_slot = 4;
 
 inventarioUI = spr_inventario_UI;
 inventarioItens = spr_inventario_itens;
 
-inventarioIntens_colunas = sprite_get_width(inventarioItens)/tamanhoFrame;
+inventarioItens_colunas = sprite_get_width(inventarioItens)/tamanhoFrame;
 inventarioIntens_linhas = sprite_get_height(inventarioItens)/tamanhoFrame;
 
 informacaoPersonagemX = xStart + (9 * escala);
@@ -57,7 +66,7 @@ playerInfo[# 1, 3] = "Jogador";
 ds_inventario = ds_grid_create(2, inventario_slots);
 
 enum item{
-	none	       = 0,
+	nenhum	       = 0,
 	tomate         = 1,
 	batata         = 2,
 	cenoura        = 3,
@@ -74,7 +83,10 @@ enum item{
 	pocao          = 14,
 	estrela_do_mar = 15,
 	cogumelo       = 16,
-	tamanho        = 17
+	pistola        = 17,
+	rifle          = 18,
+	pistola12      = 19,
+	tamanho        = 20
 }
 
 for(var yy = 0; yy < inventario_slots;yy++){

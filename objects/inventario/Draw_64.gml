@@ -19,3 +19,70 @@ for(var yy=0;yy<3;yy++){
 }
 
 //----Inventario
+var indexX = 0, indexY = 0, xx, yy, spriteX, spriteY, iitem, gradeInventario;
+gradeInventario = ds_inventario;
+
+for(var index=0;index < inventario_slots;index++){
+	
+	//x,y Localização do slot
+	xx = slots_x + ((tamanhoFrame+x_distancia_slot)*escala*indexX);
+	yy = slots_y + ((tamanhoFrame+y_distancia_slot)*escala*indexY);
+	
+	//Item
+	iitem = gradeInventario[# 0, index];
+	spriteX = (iitem mod inventarioItens_colunas)*tamanhoFrame;
+	spriteY = (iitem div inventarioItens_colunas)*tamanhoFrame;
+	
+	//Desenha slot e Item
+	draw_sprite_part_ext(inventarioUI,0,0,0,tamanhoFrame,tamanhoFrame,xx,yy, escala,escala,c_white,1);
+
+	switch(index){
+			case slot_selecionado:
+				if(iitem > 0) draw_sprite_part_ext(
+					inventarioItens,0,spriteX,spriteY,tamanhoFrame,tamanhoFrame,xx,yy,escala, escala, c_white,1
+				);
+				gpu_set_blendmode(bm_add);
+				draw_sprite_part_ext(inventarioUI,0,0,0,tamanhoFrame,tamanhoFrame,xx,yy,escala,escala,c_white,.3);
+				gpu_set_blendmode(bm_normal);
+			break;
+			case slot_pegado:
+				if(iitem > 0) draw_sprite_part_ext(
+					inventarioItens,0,spriteX,spriteY,tamanhoFrame,tamanhoFrame,xx,yy,escala, escala, c_white,0.2
+				);
+			break;
+			default:
+				if(iitem > 0) draw_sprite_part_ext(
+					inventarioItens,0,spriteX,spriteY,tamanhoFrame,tamanhoFrame,xx,yy,escala, escala, c_white,1
+				);
+			break;
+	}
+		
+	
+	
+	if(iitem > 0 ){
+		var numero = gradeInventario[# 1, index];
+		draw_text_color(xx+3,yy,string(numero),cor,cor,cor,cor,1);
+	}
+	
+	if(indexX >= inventario_slots_largura-1){
+		indexX = 0;
+		indexY++;
+	}else{
+		indexX++;
+	}
+	
+}
+
+if(slot_pegado != -1){	
+	iitem = gradeInventario[# 0, slot_pegado];
+	spriteX = (iitem mod inventarioItens_colunas)*tamanhoFrame;
+	spriteY = (iitem div inventarioItens_colunas)*tamanhoFrame;
+	var posMouseX =  mouseX+15;
+	var posMouseY = mouseY;
+	draw_sprite_part_ext(
+		inventarioItens,0,spriteX,spriteY,tamanhoFrame,tamanhoFrame,posMouseX,posMouseY,escala, escala, c_white,1
+	);
+	
+	var inventarioNum = gradeInventario[# 1, slot_pegado];
+	draw_text_color(posMouseX,posMouseY,string(inventarioNum),cor,cor,cor,cor,1);
+}

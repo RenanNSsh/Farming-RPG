@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "b5b7db9d-7f66-455e-9fa0-131b83f13256",
+            "Value": {
+                "id": "f89f2ed2-20b9-4220-a2eb-63641609d70d",
+                "resourcePath": "sprites\\kisspng_pixel_art_digital_art_pixel_gun_5b13965f0cb264_766685521528010335052\\kisspng_pixel_art_digital_art_pixel_gun_5b13965f0cb264_766685521528010335052.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bc704aa0-1518-4ea3-b82e-65190716beac",
             "Value": {
                 "id": "05cc1f46-1a15-4834-93e0-9b11ac72a798",

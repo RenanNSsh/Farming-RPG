@@ -22,5 +22,7 @@ yy = gradeY * frame;
 
 draw_rectangle_color(xx,yy, xx+frame, yy+frame, corPossivelPlantar, corPossivelPlantar, corPossivelPlantar, corPossivelPlantar, true);
 
-draw_sprite(spr_plantagem_pronto,plantaSelecionada, xx+(frame/2), yy+(frame/2));
+if(plantaSelecionada != -1){
+	draw_sprite(spr_plantagem_pronto,plantaSelecionada, xx+(frame/2), yy+(frame/2));
+}
  

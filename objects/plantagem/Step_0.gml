@@ -13,16 +13,22 @@ if(room != rm_fazenda && room != rm_floresta){
 		mouseX = mouse_x;
 		mouseY = mouse_y;
 	
-		if(mouse_wheel_up()) plantaSelecionada++;
-		if(mouse_wheel_down()) plantaSelecionada--;
+		if(mouse_wheel_up()) inventario.indicePlantaSelecionada++;
+		if(mouse_wheel_down())  inventario.indicePlantaSelecionada--;
+				
 	
-		if(plantaSelecionada<0){
-			plantaSelecionada = sprite_get_number(spr_plantagem_pronto)-1;
+		var ultimaPlanta = array_length_1d(inventario.plantasInventario)-1;
+		if(inventario.indicePlantaSelecionada < 0){
+			plantaSelecionada = inventario.plantasInventario[ultimaPlanta];
+			inventario.indicePlantaSelecionada = ultimaPlanta;
+		}else if(inventario.indicePlantaSelecionada > ultimaPlanta){
+			plantaSelecionada = inventario.plantasInventario[0];
+			inventario.indicePlantaSelecionada = 0;
+		}else{
+			plantaSelecionada = inventario.plantasInventario[inventario.indicePlantaSelecionada];
 		}
-		if(plantaSelecionada > sprite_get_number(spr_plantagem_pronto)-1){
-			plantaSelecionada = 0;
-		}
-	
+		
+		
 		if(mouse_check_button(mb_left)){
 			cria_instancia_plantagem(mouseX,mouseY,plantaSelecionada);
 		}

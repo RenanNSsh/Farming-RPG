@@ -13,7 +13,8 @@ enum plantas {
 	alcachofra,
 	pimenta,
 	pepino,
-	milho
+	milho,
+	tamanho = 7
 }
 
 cria_plantagem_tipo(4,40,"tomate");
@@ -25,7 +26,8 @@ cria_plantagem_tipo(2,20,"pepino");
 cria_plantagem_tipo(5,50,"milho");
 
 plantando = false;
-plantaSelecionada = 0;
+
+plantaSelecionada = -1;
 
 mouseX = 0;
 mouseY = 0;

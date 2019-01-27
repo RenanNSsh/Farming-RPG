@@ -94,3 +94,19 @@ for(var yy = 0; yy < inventario_slots;yy++){
 	ds_inventario [# 1, yy] = irandom_range(1,10);
 	
 }
+plantasInventario = [];
+indicePlantaSelecionada = -1;
+var dsInventario = ds_inventario;
+
+with(plantagem){	
+	for(var yy = 0; yy<item.tamanho;yy++){		
+		var item_no_inventario = dsInventario[# 0, yy];
+		show_debug_message("item: " + string(item_no_inventario));
+		if(item_no_inventario >0 && item_no_inventario<=plantas.tamanho){
+			inventario.plantasInventario[array_length_1d(inventario.plantasInventario)] =  item_no_inventario-1;
+			show_debug_message("planta: " + string(item_no_inventario));
+		}
+	}
+	inventario.indicePlantaSelecionada = 0;
+	plantaSelecionada = inventario.plantasInventario[0];
+}

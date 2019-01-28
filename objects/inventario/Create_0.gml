@@ -40,6 +40,9 @@ informacaoPersonagemY = yStart + (9 * escala);
 slots_x = informacaoPersonagemX;
 slots_y = yStart + (40 * escala);
 
+descricao_x = informacaoPersonagemX;
+descricao_y = yStart + (156 * escala);
+
 //------INFORMAÇÕES DO PLAYER
 //0 = OURO
 //1 = PRATA
@@ -86,7 +89,7 @@ enum item{
 	cogumelo       = 16,
 	pistola        = 17,
 	rifle          = 18,
-	pistola12      = 19,
+	pistola2       = 19,
 	tamanho        = 20
 }
 
@@ -96,7 +99,7 @@ var dsInventario = ds_inventario;
 var plantasExistentes = []
 for(var yy = 0; yy < inventario_slots;yy++){
 	var itemAleatorio = irandom_range(1, item.tamanho - 1);
-	var valorAleatorio = irandom_range(1,5);
+	var valorAleatorio = irandom_range(1,10);
 	dsInventario[# 0, yy] = itemAleatorio;
 	dsInventario[# 1, yy] = valorAleatorio;
 	
@@ -117,8 +120,58 @@ for(var yy = 0; yy < inventario_slots;yy++){
 	
 }
 
-
-
 with(plantagem){	
 	plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,inventario.indicePlantaSelecionada);
 }
+
+#region Criar a grade de descrição dos itens
+
+	ds_descricao_itens = ds_grid_create(2, item.tamanho);
+	
+	//---Nome dos Items
+	var coluna = 0, linha = 0;
+	ds_descricao_itens[# coluna, linha++] = "Nada";
+	ds_descricao_itens[# coluna, linha++] = "Tomate";
+	ds_descricao_itens[# coluna, linha++] = "Batata";
+	ds_descricao_itens[# coluna, linha++] = "Cenoura";
+	ds_descricao_itens[# coluna, linha++] = "Alcachofra";
+	ds_descricao_itens[# coluna, linha++] = "Pimenta";
+	ds_descricao_itens[# coluna, linha++] = "Pepino";
+	ds_descricao_itens[# coluna, linha++] = "Milho";
+	ds_descricao_itens[# coluna, linha++] = "Madeira";
+	ds_descricao_itens[# coluna, linha++] = "Pedra";
+	ds_descricao_itens[# coluna, linha++] = "Balde";
+	ds_descricao_itens[# coluna, linha++] = "Cadeira";
+	ds_descricao_itens[# coluna, linha++] = "quadro";
+	ds_descricao_itens[# coluna, linha++] = "Machado";
+	ds_descricao_itens[# coluna, linha++] = "Pocao";
+	ds_descricao_itens[# coluna, linha++] = "Estrela do Mar";
+	ds_descricao_itens[# coluna, linha++] = "Cogumelo";
+	ds_descricao_itens[# coluna, linha++] = "Pistola";
+	ds_descricao_itens[# coluna, linha++] = "Rifle";
+	ds_descricao_itens[# coluna, linha++] = "Pistola2";
+	
+	//---Descrição dos itens
+	var coluna = 1, linha = 0;
+	ds_descricao_itens[# coluna, linha++] = "Vazio.";
+	ds_descricao_itens[# coluna, linha++] = "Tomate podre.";
+	ds_descricao_itens[# coluna, linha++] = "Nenhum ser humano deveria comer isto.veria comer isto.";
+	ds_descricao_itens[# coluna, linha++] = "So coma se for um coelho.";
+	ds_descricao_itens[# coluna, linha++] = "Isto dai e uma merda, mermao.";
+	ds_descricao_itens[# coluna, linha++] = "LaCu Caracha";
+	ds_descricao_itens[# coluna, linha++] = "Una Exception, Una Pepino.";
+	ds_descricao_itens[# coluna, linha++] = "Usar isto para pipoca e maravilhoso.";
+	ds_descricao_itens[# coluna, linha++] = "Madeira boa pra construir seu barraco.";
+	ds_descricao_itens[# coluna, linha++] = "Mantenha longe de viciados.";
+	ds_descricao_itens[# coluna, linha++] = "Seu melhor amigo quando ta bebado.";
+	ds_descricao_itens[# coluna, linha++] = "Pode usar isto para sentar, ou sentar no chao mesmo.";
+	ds_descricao_itens[# coluna, linha++] = "Quadro Magnific.";
+	ds_descricao_itens[# coluna, linha++] = "de Assis.";
+	ds_descricao_itens[# coluna, linha++] = "Pocao da depressao.";
+	ds_descricao_itens[# coluna, linha++] = "Estrela do Maravilho dia.";
+	ds_descricao_itens[# coluna, linha++] = "Cogumelo do sol tunado";
+	ds_descricao_itens[# coluna, linha++] = "Tu ta Pistola?";
+	ds_descricao_itens[# coluna, linha++] = "Rifle AK47, a arma perfeita para o combate.";
+	ds_descricao_itens[# coluna, linha++] = "Pistola calibre 12, a arma pesada perfeita se tu quer uma pistola.";
+
+#endregion

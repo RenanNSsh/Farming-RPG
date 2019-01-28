@@ -80,6 +80,17 @@ for(var index=0;index < inventario_slots;index++){
 	
 }
 
+//Desenha a Descrição do Item
+var dDescricao_grade = ds_descricao_itens, descricao = "";
+iitem = gradeInventario[# 0, slot_selecionado];
+
+	if(iitem >=0){
+		draw_set_font(fnt_texto_12);		
+		descricao = string(dDescricao_grade[# 0, iitem]) + ". "+ string(dDescricao_grade[# 1, iitem]);
+		cor = c_black;
+		draw_text_ext_color(descricao_x,descricao_y,descricao,string_height("M"), escala * larguraTela - (x_distancia_slot*2),cor,cor,cor,cor,1)
+	}
+
 if(slot_pegado != -1){	
 	iitem = gradeInventario[# 0, slot_pegado];
 	spriteX = (iitem mod inventarioItens_colunas)*tamanhoFrame;

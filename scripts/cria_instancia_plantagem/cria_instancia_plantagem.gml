@@ -24,7 +24,10 @@ if(celula == 0){
 	}else{
 		show_debug_message("tem solo fértil aqui.");
 	}
-
+	
+	//Altera o inventario
+	atualiza_inventario_planta();
+	
 	//Cria a instancia
 	var instanciaPlantagem = instance_create_layer(xx+(tamanhoFrame/2),yy+(tamanhoFrame/2),"Instancias",obj_plantagem);
 	gradeInstancias[# gradeX, gradeY] = instanciaPlantagem;

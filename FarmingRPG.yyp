@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "3b4b8bb1-412f-4a29-a89a-c6a2fdfe8c1b",
+            "Value": {
+                "id": "7e406fea-6e2c-42a4-908b-55afc0d3730e",
+                "resourcePath": "scripts\\atualiza_inventario_planta\\atualiza_inventario_planta.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3e15e1f8-e85a-4809-bf8e-293ac917d6e6",
             "Value": {
                 "id": "78d18ae7-fa5f-4fea-9c86-596474ffc97e",
@@ -599,6 +607,14 @@
             }
         },
         {
+            "Key": "d79f75c8-c51e-4223-8172-cd46452be2e6",
+            "Value": {
+                "id": "47771442-a06d-4c80-a092-a9fe5ba8182d",
+                "resourcePath": "scripts\\existe_planta\\existe_planta.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "db8f5404-59c9-4e62-926c-c4ec2e404bd8",
             "Value": {
                 "id": "85043ee7-6f64-41dc-b467-c7c380860fc1",
@@ -620,14 +636,6 @@
                 "id": "7587f029-51af-42ea-b7f1-ea87331d78b0",
                 "resourcePath": "sprites\\spr_cabelo_mulher_2\\spr_cabelo_mulher_2.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "e329a83d-bc65-43d2-9c7d-5887b9bba2ac",
-            "Value": {
-                "id": "3926098d-1945-44cb-93d3-60c3fff2cfbf",
-                "resourcePath": "scripts\\remover_itens_duplicados\\remover_itens_duplicados.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -740,7 +748,8 @@
         "ae803fba-6816-4a8c-92da-7acd74ffe780",
         "81b42aea-a534-441d-8e9c-32964647b3bb",
         "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8",
-        "e329a83d-bc65-43d2-9c7d-5887b9bba2ac"
+        "d79f75c8-c51e-4223-8172-cd46452be2e6",
+        "3b4b8bb1-412f-4a29-a89a-c6a2fdfe8c1b"
     ],
     "tutorial": ""
 }

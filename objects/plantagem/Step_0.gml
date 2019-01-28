@@ -6,31 +6,40 @@ if(room != rm_fazenda && room != rm_floresta){
 }
 
 #region Plantanndo
+
 	if(keyboard_check_pressed(ord("P"))) {plantando = !plantando;}
-
-
+	
 	if(plantando){
 		mouseX = mouse_x;
 		mouseY = mouse_y;
-	
+		var dsPlantaInventario = inventario.ds_plantasInventario
 		if(mouse_wheel_up()) inventario.indicePlantaSelecionada++;
 		if(mouse_wheel_down())  inventario.indicePlantaSelecionada--;
 				
 	
-		var ultimaPlanta = ds_list_size(inventario.ds_plantasInventario)-1;
+		var ultimaPlanta = ds_list_size(dsPlantaInventario)-1;
 		if(inventario.indicePlantaSelecionada < 0){
 			plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,ultimaPlanta);
 			inventario.indicePlantaSelecionada = ultimaPlanta;
 		}else if(inventario.indicePlantaSelecionada > ultimaPlanta){
-			plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,0);
+			plantaSelecionada = ds_list_find_value(dsPlantaInventario,0);
 			inventario.indicePlantaSelecionada = 0;
 		}else{
-			plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,inventario.indicePlantaSelecionada);
+			plantaSelecionada = ds_list_find_value(dsPlantaInventario,inventario.indicePlantaSelecionada);
+		}
+		
+		//Atualiza a lista de Plantas, caso alguma não esteja no inventario
+		if(!ds_list_empty(dsPlantaInventario) && !existe_planta(plantaSelecionada+1)){
+			var indexPlanta = ds_list_find_index(inventario.ds_plantasInventario, plantagem.plantaSelecionada);
+			ds_list_delete(inventario.ds_plantasInventario,indexPlanta);
 		}
 		
 		
-		if(mouse_check_button(mb_left)){
-			cria_instancia_plantagem(mouseX,mouseY,plantaSelecionada);
+		
+		if(!ds_list_empty(dsPlantaInventario)){
+			if(mouse_check_button(mb_left)){
+				cria_instancia_plantagem(mouseX,mouseY,plantaSelecionada);
+			}
 		}
 	}
 #endregion

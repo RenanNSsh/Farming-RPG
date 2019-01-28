@@ -92,6 +92,8 @@ if(slot_pegado != -1){
 			x_frame = item_numero mod (largura_sprite/tamanho_frame);
 			y_frame = item_numero div (largura_sprite/tamanho_frame);
 		}
+		
 		show_debug_message("Dropou algo")
 	}
 }
+

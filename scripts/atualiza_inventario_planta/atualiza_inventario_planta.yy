@@ -1,8 +1,8 @@
 {
-    "id": "e329a83d-bc65-43d2-9c7d-5887b9bba2ac",
+    "id": "3b4b8bb1-412f-4a29-a89a-c6a2fdfe8c1b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "remover_itens_duplicados",
+    "name": "atualiza_inventario_planta",
     "IsCompatibility": false,
     "IsDnD": false
 }

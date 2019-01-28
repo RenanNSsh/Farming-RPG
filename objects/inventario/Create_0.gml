@@ -96,7 +96,7 @@ var dsInventario = ds_inventario;
 var plantasExistentes = []
 for(var yy = 0; yy < inventario_slots;yy++){
 	var itemAleatorio = irandom_range(1, item.tamanho - 1);
-	var valorAleatorio = irandom_range(1,10);
+	var valorAleatorio = irandom_range(1,5);
 	dsInventario[# 0, yy] = itemAleatorio;
 	dsInventario[# 1, yy] = valorAleatorio;
 	

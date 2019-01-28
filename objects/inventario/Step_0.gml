@@ -3,6 +3,7 @@
 
 if(keyboard_check_pressed(ord("I"))){
 	mostrarInventario = !mostrarInventario;
+	if(plantagem.plantando) plantagem.plantando = false;
 }
 
 if(!mostrarInventario) exit;
@@ -20,6 +21,7 @@ if(!mostrarInventario) exit;
 	var posicaoX = inventario_mouseX div celulaX_comEspaco;
 	var posicaoY = inventario_mouseY div celulaY_comEspaco;
 
+	var mouse_no_inventario = true;
 	if(posicaoX >= 0 && posicaoX < inventario_slots_largura && posicaoY >= 0 && posicaoY < inventario_slots_altura){
 		var sX = inventario_mouseX - (posicaoX * celulaX_comEspaco);
 		var sY = inventario_mouseY - (posicaoY * celulaY_comEspaco);
@@ -32,6 +34,7 @@ if(!mostrarInventario) exit;
 		if(indexSelecionado >= inventario_slots) slot_selecionado = -1;
 		else slot_selecionado = min(inventario_slots-1,indexSelecionado);
 	}else{
+		mouse_no_inventario = false;
 		slot_selecionado = -1;
 	}
 	
@@ -46,7 +49,10 @@ var selecionadoItem = gradeInventario[# 0, slot_selecionado];
 if(slot_pegado != -1){
 		
 	if(mouse_check_button_pressed(mb_left)){
-		if(selecionadoItem == item.nenhum){
+		if(!mouse_no_inventario){
+			var pegado_item = gradeInventario[# 0, slot_pegado];
+			dropar_item(slot_pegado,pegado_item,true);
+		}else if(selecionadoItem == item.nenhum){
 			// Coloca no slot Vazio
 			gradeInventario[# 0, slot_selecionado] = gradeInventario[# 0, slot_pegado];
 			gradeInventario[# 1, slot_selecionado] = gradeInventario[# 1, slot_pegado];
@@ -80,20 +86,7 @@ if(slot_pegado != -1){
 	
 	//Dropa o item ao mundo do jogo
 	if(mouse_check_button_pressed(mb_middle)){
-		gradeInventario[# 1, slot_selecionado]--;
-		//Se for o ultimo do inventario, esvazia
-		if(gradeInventario[# 1, slot_selecionado] == 0){ 
-			gradeInventario[# 0,slot_selecionado] = item.nenhum;
-		}
-		
-		var instancia = instance_create_layer(obj_jogador.x, obj_jogador.y,"Instancias",obj_item);
-		with(instancia){
-			item_numero = selecionadoItem;
-			x_frame = item_numero mod (largura_sprite/tamanho_frame);
-			y_frame = item_numero div (largura_sprite/tamanho_frame);
-		}
-		
-		show_debug_message("Dropou algo")
+		dropar_item(slot_selecionado,slot_selecionado,false);
 	}
 }
 

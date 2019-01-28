@@ -7,7 +7,7 @@ if(room != rm_fazenda && room != rm_floresta){
 
 #region Plantanndo
 
-	if(keyboard_check_pressed(ord("P"))) {plantando = !plantando;}
+	if(keyboard_check_pressed(ord("P")) && !inventario.mostrarInventario) {plantando = !plantando;}
 	
 	if(plantando){
 		mouseX = mouse_x;

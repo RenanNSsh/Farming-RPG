@@ -51,7 +51,7 @@ if(slot_pegado != -1){
 	if(mouse_check_button_pressed(mb_left)){
 		if(!mouse_no_inventario){
 			var pegado_item = gradeInventario[# 0, slot_pegado];
-			dropar_item(slot_pegado,pegado_item,true);
+			dropar_item(slot_pegado,pegado_item,true,1);
 		}else if(selecionadoItem == item.nenhum){
 			// Coloca no slot Vazio
 			gradeInventario[# 0, slot_selecionado] = gradeInventario[# 0, slot_pegado];
@@ -78,6 +78,12 @@ if(slot_pegado != -1){
 			gradeInventario[# 0, slot_pegado] = selecionadoItem;
 			gradeInventario[# 1, slot_pegado] =selecionadoItem_num;			
 		}
+	}else if (mouse_check_button_pressed(mb_right)){
+		if(!mouse_no_inventario){
+			var quantidadeItens = gradeInventario[# 1, slot_pegado];
+			var pegado_item = gradeInventario[# 0, slot_pegado];
+			dropar_item(slot_pegado,pegado_item,true,quantidadeItens);
+		}
 	}
 }else if (selecionadoItem != item.nenhum){
 	if(mouse_check_button_pressed(mb_left)){
@@ -86,7 +92,7 @@ if(slot_pegado != -1){
 	
 	//Dropa o item ao mundo do jogo
 	if(mouse_check_button_pressed(mb_middle)){
-		dropar_item(slot_selecionado,slot_selecionado,false);
+		dropar_item(slot_selecionado,selecionadoItem,false,1);
 	}
 }
 

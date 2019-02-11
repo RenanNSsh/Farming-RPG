@@ -12,8 +12,10 @@ var dsInventario = inventario.ds_inventario;
 			
 			//Se for zero, remove do slot
 			if(dsInventario[# 1,linha] == 0) {
-				dsInventario[# 0, linha] = item.nenhum;				
+				dsInventario[# 0, linha] = item.nenhum;		
+				remove_planta_selecao();
 			}			
+			
 			
 			break;
 		}

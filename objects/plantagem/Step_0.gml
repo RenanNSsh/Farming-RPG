@@ -29,10 +29,7 @@ if(room != rm_fazenda && room != rm_floresta){
 		}
 		
 		//Atualiza a lista de Plantas, caso alguma não esteja no inventario
-		if(!ds_list_empty(dsPlantaInventario) && !existe_planta(plantaSelecionada+1)){
-			var indexPlanta = ds_list_find_index(inventario.ds_plantasInventario, plantagem.plantaSelecionada);
-			ds_list_delete(inventario.ds_plantasInventario,indexPlanta);
-		}
+		
 		
 		
 		

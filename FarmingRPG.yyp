@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "34d0e43c-dd38-45ed-ad05-d1fee92e4f34",
+            "Value": {
+                "id": "62b5cb2e-9f68-4ae9-a720-219e311c8ef5",
+                "resourcePath": "views\\34d0e43c-dd38-45ed-ad05-d1fee92e4f34.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "37f04ecc-43bb-4a6e-bb8c-06b878d4f104",
             "Value": {
                 "id": "de4ee01b-2861-464d-af5c-ab97dcff02d1",
@@ -388,6 +396,14 @@
                 "id": "0032c761-ea6b-4157-bc0a-a332a9bd774f",
                 "resourcePath": "views\\9f5176f8-04f7-44f3-b4e0-340f0f410728.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
+            "Value": {
+                "id": "d4e4797d-f7b0-4fbf-86da-714b1b451add",
+                "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
+                "resourceType": "GMAmazonFireOptions"
             }
         },
         {
@@ -631,6 +647,14 @@
             }
         },
         {
+            "Key": "dd650c97-f560-473b-a2d0-1c3b6a26dfa2",
+            "Value": {
+                "id": "e0b31866-cbda-4660-964b-bb42e34236cb",
+                "resourcePath": "scripts\\remove_planta_selecao\\remove_planta_selecao.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8",
             "Value": {
                 "id": "418f41f1-417a-4b22-a989-2bb10277bfba",
@@ -766,7 +790,8 @@
         "e0ab0f6e-a67f-4249-bca6-7f9adf4ea7c8",
         "d79f75c8-c51e-4223-8172-cd46452be2e6",
         "3b4b8bb1-412f-4a29-a89a-c6a2fdfe8c1b",
-        "edccc920-8328-45d6-b1a9-028ce0900bee"
+        "edccc920-8328-45d6-b1a9-028ce0900bee",
+        "dd650c97-f560-473b-a2d0-1c3b6a26dfa2"
     ],
     "tutorial": ""
 }

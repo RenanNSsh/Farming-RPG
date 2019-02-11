@@ -45,44 +45,51 @@ if(!mostrarInventario) exit;
 
 var gradeInventario = ds_inventario;
 var selecionadoItem = gradeInventario[# 0, slot_selecionado];
+var algumItemSelecionado = slot_pegado != -1
 
-if(slot_pegado != -1){
-		
-	if(mouse_check_button_pressed(mb_left)){
+if(algumItemSelecionado){		
+	if(mouse_check_button_pressed(mb_left)){		
 		if(!mouse_no_inventario){
-			var pegado_item = gradeInventario[# 0, slot_pegado];
-			dropar_item(slot_pegado,pegado_item,true,1);
+			#region dropar um do inventario
+				var pegado_item = gradeInventario[# 0, slot_pegado];
+				dropar_item(slot_pegado,pegado_item,true,1);
+			#endregion
 		}else if(selecionadoItem == item.nenhum){
-			// Coloca no slot Vazio
-			gradeInventario[# 0, slot_selecionado] = gradeInventario[# 0, slot_pegado];
-			gradeInventario[# 1, slot_selecionado] = gradeInventario[# 1, slot_pegado];
+			#region coloca da mão para o inventario
+				gradeInventario[# 0, slot_selecionado] = gradeInventario[# 0, slot_pegado];
+				gradeInventario[# 1, slot_selecionado] = gradeInventario[# 1, slot_pegado];
 			
-			gradeInventario[# 0, slot_pegado] = item.nenhum;
-			gradeInventario[# 1, slot_pegado] = 0;
-			
-			slot_pegado = -1;
-		}else if(selecionadoItem == gradeInventario[# 0, slot_pegado]){
-			// Ajunta os valores dos slots
-			if(slot_selecionado != slot_pegado){
-				gradeInventario[# 1, slot_selecionado] += gradeInventario[# 1, slot_pegado];
 				gradeInventario[# 0, slot_pegado] = item.nenhum;
 				gradeInventario[# 1, slot_pegado] = 0;
-			}
-			slot_pegado = -1;			
-		}else {
-			//Troca os slots
-			var selecionadoItem_num =  gradeInventario[# 1, slot_selecionado];
-			gradeInventario[# 0, slot_selecionado] = gradeInventario[# 0, slot_pegado];
-			gradeInventario[# 1, slot_selecionado] = gradeInventario[# 1, slot_pegado];
 			
-			gradeInventario[# 0, slot_pegado] = selecionadoItem;
-			gradeInventario[# 1, slot_pegado] =selecionadoItem_num;			
+				slot_pegado = -1;
+			#endregion
+		}else if(selecionadoItem == gradeInventario[# 0, slot_pegado]){
+			#region acumula o item
+				if(slot_selecionado != slot_pegado){
+					gradeInventario[# 1, slot_selecionado] += gradeInventario[# 1, slot_pegado];
+					gradeInventario[# 0, slot_pegado] = item.nenhum;
+					gradeInventario[# 1, slot_pegado] = 0;
+				}
+				slot_pegado = -1;	
+			#endregion
+		}else {
+			#region troca os itens
+				var selecionadoItem_num =  gradeInventario[# 1, slot_selecionado];
+				gradeInventario[# 0, slot_selecionado] = gradeInventario[# 0, slot_pegado];
+				gradeInventario[# 1, slot_selecionado] = gradeInventario[# 1, slot_pegado];
+			
+				gradeInventario[# 0, slot_pegado] = selecionadoItem;
+				gradeInventario[# 1, slot_pegado] =selecionadoItem_num;	
+			#endregion
 		}
 	}else if (mouse_check_button_pressed(mb_right)){
 		if(!mouse_no_inventario){
-			var quantidadeItens = gradeInventario[# 1, slot_pegado];
-			var pegado_item = gradeInventario[# 0, slot_pegado];
-			dropar_item(slot_pegado,pegado_item,true,quantidadeItens);
+			#region dropar todos os itens
+				var quantidadeItens = gradeInventario[# 1, slot_pegado];
+				var pegado_item = gradeInventario[# 0, slot_pegado];
+				dropar_item(slot_pegado,pegado_item,true,quantidadeItens);
+			#endregion
 		}
 	}
 }else if (selecionadoItem != item.nenhum){

@@ -68,6 +68,7 @@ playerInfo[# 1, 3] = "Jogador";
 
 ds_inventario = ds_grid_create(2, inventario_slots);
 ds_plantasInventario = ds_list_create();
+adiciona_lista_plantas();
 
 enum item{
 	nenhum	       = 0,
@@ -94,31 +95,6 @@ enum item{
 }
 
 indicePlantaSelecionada = 0;
-var dsInventario = ds_inventario;
-
-var plantasExistentes = []
-for(var yy = 0; yy < inventario_slots;yy++){
-	var itemAleatorio = irandom_range(1, item.tamanho - 1);
-	var valorAleatorio = irandom_range(1,10);
-	dsInventario[# 0, yy] = itemAleatorio;
-	dsInventario[# 1, yy] = valorAleatorio;
-	
-	if(itemAleatorio <= plantas.tamanho){
-		var planta = itemAleatorio-1;
-		var repetido = false;
-		show_debug_message("item: "+string(planta))
-		for(var indice = 0; indice< array_length_1d(plantasExistentes);indice++){
-			if(planta == plantasExistentes[indice]) {show_debug_message("repetido: "+string(planta)) repetido = true; break; }
-		}
-		if(!repetido){
-			show_debug_message("diferente: "+string(planta))
-			plantasExistentes[array_length_1d(plantasExistentes)] = planta;			
-			ds_list_add(ds_plantasInventario,planta);		
-		}
-		
-	}
-	
-}
 
 with(plantagem){	
 	plantaSelecionada = ds_list_find_value(inventario.ds_plantasInventario,inventario.indicePlantaSelecionada);

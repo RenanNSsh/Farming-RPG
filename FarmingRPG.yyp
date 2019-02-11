@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "03115449-9804-4051-89ab-99826834a3ad",
+            "Value": {
+                "id": "880c61b4-772f-41e2-a81c-caeab0999069",
+                "resourcePath": "scripts\\adiciona_lista_plantas\\adiciona_lista_plantas.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "03a8bb5a-52d5-4a13-a585-6e04189d20a7",
             "Value": {
                 "id": "023eebd5-c9ef-44d5-b688-c5387fa4b68a",
@@ -401,7 +409,7 @@
         {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
-                "id": "d4e4797d-f7b0-4fbf-86da-714b1b451add",
+                "id": "b6ccac67-77c9-4ad6-9d38-ae57f50051cd",
                 "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
                 "resourceType": "GMAmazonFireOptions"
             }
@@ -791,7 +799,8 @@
         "d79f75c8-c51e-4223-8172-cd46452be2e6",
         "3b4b8bb1-412f-4a29-a89a-c6a2fdfe8c1b",
         "edccc920-8328-45d6-b1a9-028ce0900bee",
-        "dd650c97-f560-473b-a2d0-1c3b6a26dfa2"
+        "dd650c97-f560-473b-a2d0-1c3b6a26dfa2",
+        "03115449-9804-4051-89ab-99826834a3ad"
     ],
     "tutorial": ""
 }

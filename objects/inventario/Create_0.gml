@@ -68,7 +68,7 @@ playerInfo[# 1, 3] = "Jogador";
 
 ds_inventario = ds_grid_create(2, inventario_slots);
 ds_plantasInventario = ds_list_create();
-adiciona_lista_plantas();
+adiciona_itens_inventario();
 
 enum item{
 	nenhum	       = 0,

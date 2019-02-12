@@ -50,7 +50,7 @@
             "Key": "03115449-9804-4051-89ab-99826834a3ad",
             "Value": {
                 "id": "880c61b4-772f-41e2-a81c-caeab0999069",
-                "resourcePath": "scripts\\adiciona_lista_plantas\\adiciona_lista_plantas.yy",
+                "resourcePath": "scripts\\adiciona_itens_inventario\\adiciona_itens_inventario.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -409,7 +409,7 @@
         {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
-                "id": "a0643b93-c59e-4d9a-a657-ee813a6f4f12",
+                "id": "5362b655-f656-4fa4-a9c3-feee5cf10970",
                 "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
                 "resourceType": "GMAmazonFireOptions"
             }

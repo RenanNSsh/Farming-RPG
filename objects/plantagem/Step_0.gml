@@ -30,9 +30,6 @@ if(room != rm_fazenda && room != rm_floresta){
 		
 		//Atualiza a lista de Plantas, caso alguma não esteja no inventario
 		
-		
-		
-		
 		if(!ds_list_empty(dsPlantaInventario)){
 			if(mouse_check_button(mb_left)){
 				cria_instancia_plantagem(mouseX,mouseY,plantaSelecionada);

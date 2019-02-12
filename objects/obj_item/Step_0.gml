@@ -43,7 +43,7 @@ if(movimentacao_drop){
 							dsInventario[# 0, yy] = numero_item;
 							dsInventario[# 1, yy] += 1;
 							var dsPlantasInventario = inventario.ds_plantasInventario;
-							if(numero_item <= item.tamanho) {
+							if(numero_item <= plantas.tamanho) {
 								ds_list_add(dsPlantasInventario, numero_item-1);
 								plantagem.plantaSelecionada = -1;
 							}

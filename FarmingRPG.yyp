@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "b6644b76-85c3-4369-b2b7-ba1549a10a7e",
+            "Value": {
+                "id": "002b35b2-7b92-45be-8169-9bdc50928d4a",
+                "resourcePath": "objects\\obj_notificacao\\obj_notificacao.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bc704aa0-1518-4ea3-b82e-65190716beac",
             "Value": {
                 "id": "05cc1f46-1a15-4834-93e0-9b11ac72a798",

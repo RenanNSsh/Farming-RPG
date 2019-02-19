@@ -54,6 +54,40 @@ if(movimentacao_drop){
 				}	
 			}			
 			if(pegado){
+				#region Cria Notificacao
+					if(!instance_exists(obj_notificacao)){instance_create_layer(0,0,"Instancias",obj_notificacao);}
+					
+					var numero_item = item_numero;
+					with(obj_notificacao){
+						if(!ds_exists(ds_notificacoes,ds_type_grid)){
+							ds_notificacoes = ds_grid_create(2,1);
+							var not_grade = ds_notificacoes;
+							not_grade[# 0, 0] = 1;
+							not_grade[# 1, 0] = inventario.ds_descricao_itens[# 0, numero_item];
+						} else{ //Adiciona a grade
+							event_perform(ev_other,ev_user0);
+							
+							var not_grade = ds_notificacoes;
+							var linhas_grade = ds_grid_height(not_grade);
+							var nomeItem = inventario.ds_descricao_itens[# 0, numero_item];
+							var item_na_grade = false;
+							for(var linhaAtual =0; linhaAtual< linhas_grade; linhaAtual++){
+								if(not_grade[# 1, linhaAtual] == nomeItem ){
+									not_grade[# 0, linhaAtual]++;
+									item_na_grade = true;
+									break;
+								}
+							}
+							if(!item_na_grade){
+								ds_grid_resize(not_grade, 2, linhas_grade+1);
+								not_grade[# 0, linhas_grade] = 1;
+								not_grade[# 1, linhas_grade] = nomeItem;
+							}
+							
+						}
+					}
+				#endregion
+				
 				instance_destroy();
 				show_debug_message("Item pegado");
 			}

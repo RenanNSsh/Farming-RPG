@@ -7,7 +7,11 @@ var plantaRemover = argument0;
 if(!ds_list_empty(dsPlantaInventario) && !existe_planta(plantaRemover+1)){
 	var indexPlanta = ds_list_find_index(dsPlantaInventario, plantaRemover);
 	ds_list_delete(dsPlantaInventario,indexPlanta);
-	if (plantaRemover = planta_Selecionada){
+	var existePlantaNoIndiceAtual = ds_list_find_value(dsPlantaInventario,inventario.indicePlantaSelecionada);
+	if(!existePlantaNoIndiceAtual){
+		inventario.indicePlantaSelecionada -= 1;
+	}
+	if (plantaRemover = planta_Selecionada ){
 		plantagem.plantaSelecionada = ds_list_find_value(dsPlantaInventario,inventario.indicePlantaSelecionada);
 	}
 }
